@@ -1,0 +1,261 @@
+*{
+    margin:0;
+    padding: 0;
+    outline: none;
+}
+@font-face{
+    font-family:Fighting;
+    src: url('Fighting.ttf');
+}
+body{
+
+    background-size:cover;
+    background-position-y: -300px;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #6094af 0%, #a3c0de 51%, #a6c2d0 100%);
+}
+.game-over{
+    font-size: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: red;
+    font-family: cursive;
+    letter-spacing: 70px;
+    display: none;
+    animation: inp 0.2s ease-out;
+}
+.mr15{
+    margin-right: 15px;
+}
+.an{
+   transform: rotate3d(0, 0, 22, -50deg);
+}
+
+.cursorimg{
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    cursor: url('images/x.svg'), auto;
+    z-index: 50;
+ }
+
+ .cursorimg img{
+    width: 100px;
+ }
+.prevent-click {
+   pointer-events:none;
+}
+.count{
+    background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 50px;
+    animation: inp 0.2s ease-out;
+}
+.inp{
+    color: white;
+    font-size: 30px;
+    font-family: cursive;
+    background: none;
+    width: 35px;
+    border: none;
+}
+.sec{
+    font-size: 40px;
+    font-family: cursive;
+    color: #000;
+}
+.logo{
+    font-family:cursive;
+    color: #fff;
+    font-size: 18px;
+}
+.not{
+    display: none;
+}
+@keyframes inp {
+  0%   {
+    transform: scale(2.7);
+  }
+  50%   {
+    transform: scale(1.5);
+  }
+  80%   {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    }
+}
+
+.btn-div{
+    text-align: center;
+    margin-top: 20px;
+    animation: inp 0.4s ease-out;
+    display: flex;
+    justify-content: center;
+}
+.btn-div button{
+    width: 105px;
+    border: navajowhite;
+    height: 50px;
+    color: white;
+    border-radius: 15px;
+
+}
+
+.btn-grad {background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%)}
+.btn-grad {
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.mr20{
+    margin-right: 20px;
+}
+.big{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 75px;
+    cursor: none;
+    animation: scalee 0.4s ease-out, inp 0.4s ease-in;
+    cursor: none;
+}
+.block{
+    width: 150px;
+    height: 150px;
+    border: 10px solid green;
+    margin-left: 30px;
+    background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%);
+    margin-top: 15px;
+    border-radius: 50%;
+    position: relative;
+}
+.minion{
+    background:url('images/clipart3359804.png') no-repeat;
+    height: 150px;
+    width: 150px;
+    transform: scale(1.3);
+    animation:minion 0.2s ease-in ;
+    background-size: cover;
+    margin: -7px 0 0 7px;
+    display: none;
+}
+.an{
+   transform: rotate3d(0, 0, 22, -50deg);
+}
+@keyframes minion {
+  0%   {
+    opacity: 0;
+    transform: scale(0) rotate(-104deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.3) rotate(104deg);
+    }
+}
+.active{
+    display: block;
+}
+@media screen and (min-width:768px)and (max-width:1919px){
+    body{
+        background-size: auto;
+        background-position-y: -935px;
+    }
+    .big{
+        width: 660px;
+        margin-top: 10px;
+    }
+    .container{
+        margin-top: -30px;
+    }
+    .block{
+        width: 120px;
+        height: 120px;  
+    }
+    .minion{
+        width: 120px;
+        height: 120px;  
+    }
+    body{
+        overflow-y: visible;
+    }
+    .game-over{
+        font-size: 15px;
+        letter-spacing: 35px;
+    }
+    .logo{
+        width: 50%;
+    }
+    .count{
+        width: 60%;
+    }
+}
+@media screen and (min-width:320px)and (max-width:767px){
+    .count{
+        width: 300px;
+    }
+    body{
+        background-position-y: 0;
+        padding-bottom: 160px;
+    }
+    .inp{
+        padding: 0;
+        font-size: 20px;
+    }
+    .big{
+        width: 295px;
+    }
+    .block{
+        width: 50px;
+        height: 50px;
+        margin-left: 0;
+    }
+    .minion{
+        width: 50px;
+        height: 50px;
+        margin: -3px 0 0 3px;
+        margin-left: 0px;
+    }
+    .sec{
+        right: 50px;
+        top: 0px;
+        font-size: 21px;
+    }
+    .logo{
+        height: 30px;
+        left: 0px;
+        font-size: 14px;
+    }
+    .cursorimg{
+        display: none;
+    }
+    .game-over{
+        letter-spacing: 10px;
+        margin-top: 25px;
+        font-size: 22px;
+    }
+  
+}
